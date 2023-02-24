@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { Router } from "@reach/router"
-import PrivateRoute from "../../components/private-route"
+import PrivateRoute from "../../components/privateRoute"
 import { IdentityContext } from "../../context/identity-context"
 
 const Login = () => {

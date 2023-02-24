@@ -12,9 +12,6 @@ require("dotenv").config("./.env")
 const sanityConfig = require("./sanity-config.js")
 
 module.exports = {
-  flags: {
-    DEV_SSR: true,
-  },
   siteMetadata: {
     title: `Starts Foundation Website`,
     description: ``,

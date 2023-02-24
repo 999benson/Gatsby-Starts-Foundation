@@ -5,9 +5,9 @@ import PropTypes from "prop-types"
 
 const PrivateRoute = ({ component: Component, location, ...rest }) => {
   const { user } = useContext(IdentityContext)
-  console.log(location)
+  console.log("location in PrivateRoute", location)
   // check if user is login, if not, navigate it to the default page
-  if (!user && location.pathname !== `/app/login`) {
+  if (!user && location.pathname !== "/app/login") {
     navigate("/app/login")
     return null
   }
@@ -15,7 +15,7 @@ const PrivateRoute = ({ component: Component, location, ...rest }) => {
 }
 
 PrivateRoute.propTypes = {
-  component: PropTypes.object.isRequired,
-  location: PropTypes.string.isRequired,
+  component: PropTypes.any.isRequired,
+  location: PropTypes.any,
 }
 export default PrivateRoute
