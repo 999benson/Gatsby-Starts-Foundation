@@ -8,7 +8,6 @@ import Objectives from "./Objectives"
 import OurTeam from "./OurTeam"
 import Layout from "./Layout"
 
-
 export {
   Layout,
   Navbar,
