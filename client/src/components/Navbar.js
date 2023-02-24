@@ -5,10 +5,11 @@ import { StaticImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import { MdSearch, MdMenu, MdClose } from "react-icons/md"
 import { SearchModalContext } from "../context/searchModalContext"
-
+import { IdentityContext } from "../context/identity-context"
 function Navbar(props) {
   const [isNavOpen, setIsNavOpen] = useState(false)
   const { openSearchModal } = useContext(SearchModalContext)
+  const { netlifyIdentity } = useContext(IdentityContext)
 
   useEffect(() => {
     if (isNavOpen) {
@@ -140,7 +141,14 @@ function Navbar(props) {
                 </Link>
               </li>
               <li className="joinClass">
-                <button className="joinBtn">Join Us</button>
+                <button
+                  className="joinBtn"
+                  onClick={() => {
+                    netlifyIdentity.open()
+                  }}
+                >
+                  Join Us
+                </button>
               </li>
               <li className="donateClass">
                 <button className="donateBtn">Donate</button>
