@@ -27,7 +27,7 @@ function Home() {
     })
   }
 
-  console.log("home pathname", window.location.pathname)
+  // console.log("home pathname", window.location.pathname)
 
   return (
     <div className="App">
