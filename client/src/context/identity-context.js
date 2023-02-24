@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react"
 import netlifyIdentity from "netlify-identity-widget"
+import PropTypes from "prop-types"
 
 const IdentityContext = createContext()
 
@@ -25,4 +26,7 @@ const IdentityProvider = props => {
   )
 }
 
+IdentityProvider.propTypes = {
+  children: PropTypes.object.isRequired,
+}
 export { IdentityContext, IdentityProvider }

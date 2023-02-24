@@ -1,8 +1,23 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Router } from "@reach/router"
 import PrivateRoute from "../../components/private-route"
-import Login from "./Login"
+import { IdentityContext } from "../../context/identity-context"
 
+const Login = () => {
+  const { netlifyIdentity } = useContext(IdentityContext)
+  return (
+    <div>
+      <h1>Login</h1>
+      <bottom
+        onClick={() => {
+          netlifyIdentity.open()
+        }}
+      >
+        Login
+      </bottom>
+    </div>
+  )
+}
 const Dashboard = () => <h1>Dashboard</h1>
 const Default = () => <h1>Main App</h1>
 
