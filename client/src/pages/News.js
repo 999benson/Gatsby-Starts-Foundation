@@ -8,7 +8,7 @@ import Layout from "../components/Layout"
 function News({ data }) {
   console.log("data", data)
   const news = data.allSanityNews.nodes
-  console.log("location", window.location.pathname)
+  // console.log("location", window.location.pathname)
   return (
     <Layout>
       <div className="container newsContainer">
